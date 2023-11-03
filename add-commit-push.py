@@ -1,5 +1,5 @@
 import os 
-
+print("testing")
 print("Add Commit Push") 
 print("\ngit status")
 os.system("git status") 
@@ -9,3 +9,4 @@ print("\ngit commit -m 'update files.'")
 os.system("git commit -m 'update files.'")
 print("\ngit push")
 os.system("git push")
+
