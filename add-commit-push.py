@@ -6,7 +6,7 @@ message = "update files"
 numOfArgs = len(sys.argv)
 print("Total Arguments Passed: " , numOfArgs)
 if numOfArgs == 3: 
-    if sys.argv[1] == "-m":
+    if sys.argv[2] == "-m":
         print("number of arguments = 3 and p2 = -m")
         message = sys.argv[2]
 
