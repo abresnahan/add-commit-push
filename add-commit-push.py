@@ -2,6 +2,7 @@ import os
 import sys
 
 print("testing")
+message = "update files"
 numOfArgs = len(sys.argv)
 print("Total Arguments Passed: " , numOfArgs)
 if numOfArgs == 3: 
@@ -19,11 +20,13 @@ print("\ngit status")
 os.system("git status")
 
 # credit W3C schools line 6-8
-print("Continue with add commit push? (y):")
-confirm = input()
-if confirm != "y": 
-    print("Canceling", confirm)
-    quit()
+if numOfArgs != 2: 
+    if sys.argv[1] == "-f":
+        print("Continue with add commit push? (y):")
+        confirm = input()
+        if confirm != "y": 
+            print("Canceling", confirm)
+            quit()
  
 print("\ngit add -A")
 os.system("git add -A")
@@ -31,8 +34,6 @@ os.system("git add -A")
 commitStatement = '\ngit commit -m "' + message + '"'
 print(commitStatement)
 os.system(commitStatement)
-# print("\ngit commit -m 'update files.'")
-# os.system("git commit -m 'update files.'")
 
 print("\ngit push")
 os.system("git push")
